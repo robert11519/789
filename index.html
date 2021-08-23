@@ -10,14 +10,48 @@
 
     <title>個人網站</title>
   </head>
-  <body>
-    <div class="sib">
+  <body >
+    <div class="sib" style="background-image: url('background-video/03.jpg');width:100vw;height:100vh; background-size: cover;">
 
 
-    <img src="background-video\03.jpg" style="width:100vw;overflow:hidden">
-    <div class="jj2" id="jj2">
-        <img src="background-video\02.png" >
-    </div>
+    <!-- <img src="background-video\03.jpg" style="width:100vw;overflow:hidden"> -->
+
+      <div class="jj2" id="jj2"  >
+          <img id="jj3" src="background-video\02.png" style="width:10vw" onClick="movejj3()">
+      </div>
+
+      <div class="sib"  id="resumehead"style="">
+        <img src="background-video\head.png" alt="">
+      </div>
+
+      <div class="sib" id="line" style="background-color:gray;width:0.01vw;height:100vh;top:10vh">
+
+      </div>
+
+<div class="sib2" >
+
+      <div id="resume0" class="sib2"  >
+        <h1 > &nbsp[經歷]</h1><br>
+        <h3>. 202009~現在 金漢實業股份有限公司 資訊專員</h3>
+        <br><br>
+      </div>
+
+      <div id="resume1" class="sib2"  >
+        <h1 > &nbsp[負責職務]</h1><br>
+        <h5>. 統合所有繁雜事物，製作完整說明書，新人報到所有電腦相關設定可以穩定運行不遺漏</h5><h5>.
+          安裝軟體順暢遇到疑難雜症知道該去何處尋找解決方法並適時解決。</h5>  <br><br>
+      </div>
+
+      <div id="resume2" class="sib2"  >
+        <h1 > &nbsp[技能專長]</h1><br>
+        <h3>. 串接api html css js php</h3>
+      </div>
+
+</div>
+
+
+
+
 
     </div>
 <!--
@@ -48,38 +82,108 @@
 
 
   }
-  div.sib{display:flex; justify-content:center; align-items:center; }
-  div.sib div.jj2{position:absolute; top: 10vh}
-
+  div.sib{display:flex; justify-content:center; align-items:center;}
+  div.sib div.jj2{position:absolute; top: 30vh;z-index: 5;}
+  div.sib2{
+    display:flex; justify-content:center; align-items:left;
+    flex-direction:column;
+  }
   video {
       transition-duration:1s;
   filter: blur(10px);
 
  }
-
+/*flex-direction:column**/
  video:hover{
 
   filter: blur(0px);
   transition-duration:1s;
  }
 
-#jj2{
+#line{
+
+  opacity: 0;
+transition: 1s;
+
+}
+
+#jj3{
 
 filter: blur(10px);
  transition-duration:1s;
 }
 
-#jj2:hover{
+#jj3:hover{
 
  filter: blur(0px);
  transition-duration:1s;
 }
 
 
+#resumehead{
+
+
+  color: gray;
+
+  opacity:  0;
+   transition-duration:1s;
+}
+#resume0{
+
+
+  color: gray;
+
+  opacity:  0;
+   transition-duration:1s;
+}
+
+
+
+#resume1{
+
+
+  color: gray;
+
+  opacity:  0;
+   transition-duration:1s;
+}
+
+#resume2{
+
+
+  color: gray;
+
+
+  opacity:  0;
+   transition-duration:1s;
+}
+
   </style>
 
+<script>
 
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js">
+// margin-right: 25% !important; transition-duration:1s;
+function movejj3(){
+
+  var el = document.getElementById("jj3");
+  el.style.opacity='0';
+    var line = document.getElementById("line");
+     var resumehead = document.getElementById("resumehead");
+    var resume0 = document.getElementById("resume0");
+    var resume = document.getElementById("resume");
+    var resume2 = document.getElementById("resume2");
+resumehead.style.opacity='1';
+  line.style.opacity='1';resume0.style.opacity='1';
+  resume1.style.opacity='1';
+resume2.style.opacity='1';
+    // do some asynchronus work
+
+}
+
+$(document).ready(function() {
+   console.log("document ready");
+});
+
 
 
 </script>
