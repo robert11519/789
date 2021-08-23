@@ -10,41 +10,50 @@
 
     <title>個人網站</title>
   </head>
-  <body >
-    <div class="sib" style="background-image: url('background-video/03.jpg');width:100vw;height:100vh; background-size: cover;">
+  <body style="height: 150vh">
 
 
-    <!-- <img src="background-video\03.jpg" style="width:100vw;overflow:hidden"> -->
+
+    <div class="sib" style="background-color:#9BA5B5;background-size:125vh;">
+
+
+
 
       <div class="jj2" id="jj2"  >
-          <img id="jj3" src="background-video\02.png" style="width:10vw" onClick="movejj3()">
+          <img id="jj3" src="background-video\ICON2.png" style="width:50vw" onClick="movejj3()">
       </div>
 
-      <div class="sib"  id="resumehead"style="">
+      <div   id="resumehead" style="align:center">
         <img src="background-video\head.png" alt="">
       </div>
 
-      <div class="sib" id="line" style="background-color:gray;width:0.01vw;height:100vh;top:10vh">
-
-      </div>
 
 <div class="sib2" >
 
       <div id="resume0" class="sib2"  >
-        <h1 > &nbsp[經歷]</h1><br>
-        <h3>. 202009~現在 金漢實業股份有限公司 資訊專員</h3>
+        <h3 > &nbsp[經歷]</h3><br>
+        <h5> &nbsp202009~現在 金漢實業股份有限公司 資訊專員</h5>
         <br><br>
       </div>
 
       <div id="resume1" class="sib2"  >
-        <h1 > &nbsp[負責職務]</h1><br>
-        <h5>. 統合所有繁雜事物，製作完整說明書，新人報到所有電腦相關設定可以穩定運行不遺漏</h5><h5>.
+        <h3 > &nbsp[負責職務]</h3><br>
+        <h5> &nbsp統合所有繁雜事物，製作完整說明書，新人報到所有電腦相關設定可以穩定運行不遺漏</h5><h5>&nbsp
           安裝軟體順暢遇到疑難雜症知道該去何處尋找解決方法並適時解決。</h5>  <br><br>
       </div>
 
       <div id="resume2" class="sib2"  >
-        <h1 > &nbsp[技能專長]</h1><br>
-        <h3>. 串接api html css js php</h3>
+        <h3 > &nbsp[技能專長]</h3><br>
+        <h5>&nbsp 串接api html css js php</h5>
+        <div class="" id="erp">
+          &nbsp&nbsp
+          <img  id="erp"src="background-video\erp1.jpg" style="width:10vw" >
+        </div>
+        <div class="" id="erp">
+          &nbsp&nbsp
+          <img  id="erp"src="background-video\erp2.jpg" style="width:10vw" >
+        </div>
+
       </div>
 
 </div>
@@ -54,6 +63,7 @@
 
 
     </div>
+
 <!--
 <div style=" position: absolute;top:5px;z-index:2">
     <img src="background-video\02.png" alt="Paris" >
@@ -82,8 +92,8 @@
 
 
   }
-  div.sib{display:flex; justify-content:center; align-items:center;}
-  div.sib div.jj2{position:absolute; top: 30vh;z-index: 5;}
+  div.sib{display:flex; justify-content:center; align-items:center;height: 150vh}
+  div.sib div.jj2{position:absolute; top: -10vh;z-index: 5;}
   div.sib2{
     display:flex; justify-content:center; align-items:left;
     flex-direction:column;
@@ -99,6 +109,24 @@
   filter: blur(0px);
   transition-duration:1s;
  }
+
+
+ @font-face {
+   font-family: XXX;
+   src: url(/background-video/XXX.otf);
+ }
+
+ h5{ font-family: XXX, XXX; }
+ 
+ #erp{
+   filter: blur(1px);
+ }
+#erp:hover{
+  filter: blur(0px);
+transform: scale(2);
+transition: all 1s ease-in-out;;
+overflow:visible;
+}
 
 #line{
 
@@ -123,7 +151,7 @@ filter: blur(10px);
 #resumehead{
 
 
-  color: gray;
+  color: white;
 
   opacity:  0;
    transition-duration:1s;
@@ -131,7 +159,7 @@ filter: blur(10px);
 #resume0{
 
 
-  color: gray;
+  color: white;
 
   opacity:  0;
    transition-duration:1s;
@@ -142,7 +170,7 @@ filter: blur(10px);
 #resume1{
 
 
-  color: gray;
+  color: white;
 
   opacity:  0;
    transition-duration:1s;
@@ -151,7 +179,7 @@ filter: blur(10px);
 #resume2{
 
 
-  color: gray;
+  color: white;
 
 
   opacity:  0;
@@ -172,17 +200,18 @@ function movejj3(){
     var resume0 = document.getElementById("resume0");
     var resume = document.getElementById("resume");
     var resume2 = document.getElementById("resume2");
+resumehead.style.display='block';
 resumehead.style.opacity='1';
-  line.style.opacity='1';resume0.style.opacity='1';
+  resume0.style.opacity='1';
   resume1.style.opacity='1';
 resume2.style.opacity='1';
+  line.style.opacity='1';
     // do some asynchronus work
 
 }
 
-$(document).ready(function() {
-   console.log("document ready");
-});
+
+
 
 
 
